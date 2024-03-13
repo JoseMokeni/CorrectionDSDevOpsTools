@@ -1,0 +1,11 @@
+FROM node:slim
+
+WORKDIR /
+
+COPY . .
+
+ENV ENV=dev
+
+RUN npm install
+
+CMD npm run test
